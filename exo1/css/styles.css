@@ -1,0 +1,28 @@
+.row
+{
+    /* border: 2px solid black; */
+} 
+.row div{
+    border: 2px solid salmon;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link 
+{
+background-color: brown !important;
+}
+
+
+.nav-pills .nav-link.active:hover{
+    background-color: black !important;
+}
+
+.img-fluid{
+   width: ;
+}
+
+
+
+.carousel-item {
+
+}
+   
