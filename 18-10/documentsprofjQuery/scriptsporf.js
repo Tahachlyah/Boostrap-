@@ -41,6 +41,7 @@ function giveColouredBackground() {
 }
 giveColouredBackground();
 
+
 function showHideParagraph() {
   let isParaDisplayed = false;
   const linkToClick = document.querySelector(".see-more");
@@ -106,7 +107,7 @@ function hamburger() {
         document
           .querySelector("header button img")
           .setAttribute("src", "img/hamburger-on.png");
-        // menu.style.display = "block";
+         menu.style.display = "block";
         isMenuOpen = true;
       } else {
         document
@@ -120,29 +121,75 @@ function hamburger() {
 hamburger();
 
 function hamburgerVersion2() {
+  // prendre le chemin vers img et mettre dans une const
   const defaultBurgerSrc = document
     .querySelector("#version2 button img")
     .getAttribute("src");
+    // selectionner la liste du menu 
   const menu = document.querySelector("header nav#version2 ul");
+  // creer linterupteur menu 
   let isMenuOpen = false;
+  // ajouter un ecouteur d'evenement à mon button au click
   document
     .querySelector("#version2 button")
     .addEventListener("click", function (event) {
+      // eviter de remonter à la ligne 
       event.preventDefault();
-      document.querySelector("header nav#version2 ul").classList.toggle("open");
+      // faire apparaitre la classe open 
+
       if (isMenuOpen == false) {
+        // si img du botton n'est pas clicked faire affciher l'autre image x au click et rend le menu clicked
         document
           .querySelector("#version2 button img")
           .setAttribute("src", "img/hamburger-on.png");
+          menu.style.display = "block";
         isMenuOpen = true;
       } else {
+        // si le menu est deja clicked revenir au hamburger 
         document
           .querySelector("#version2 button img")
           .setAttribute("src", defaultBurgerSrc);
+          menu.style.display = "none";
         isMenuOpen = false;
       }
     });
 }
 hamburgerVersion2();
+
+// DRY : Don't Repeat Yourself
+
+function hamburgerVersion3() {
+  // prendre le chemin vers img et mettre dans une const
+  const defaultBurgerSrc = document
+    .querySelector("#version3 button img")
+    .getAttribute("src");
+    // selectionner la liste du menu 
+  const menu = document.querySelector("header nav#version3 ul");
+  // creer linterupteur menu 
+  let isMenuOpen = false;
+  // ajouter un ecouteur d'evenement à mon button au click
+  document
+    .querySelector("#version3 button")
+    .addEventListener("click", function (event) {
+      // eviter de remonter à la ligne 
+      event.preventDefault();
+      // faire apparaitre la classe open 
+
+      if (isMenuOpen == false) {
+        // si img du botton n'est pas clicked faire affciher l'autre image x au click et rend le menu clicked
+        document
+          .querySelector("#version3 button img")
+          .setAttribute("src", "img/hamburger-on.png");
+        isMenuOpen = true;
+      } else {
+        // si le menu est deja clicked revenir au hamburger 
+        document
+          .querySelector("#version3 button img")
+          .setAttribute("src", defaultBurgerSrc);
+        isMenuOpen = false;
+      }
+    });
+}
+hamburgerVersion3();
 
 // DRY : Don't Repeat Yourself

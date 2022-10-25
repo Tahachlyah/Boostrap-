@@ -14,12 +14,12 @@
   opacity: 1;
   background-color: aqua;
 }
-header nav ul {
+/* header nav ul {
   display: none;
-}
-nav#version2 ul {
+} */
+/* nav#version2 ul {
   display: none;
 }
 nav#version2 ul.open {
   display: block;
-}
+} */
